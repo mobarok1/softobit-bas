@@ -1,3 +1,5 @@
+This repository is cloned from https://github.com/Ankr-network/bas-devnet-setup
+And this is a modified version
 BAS DevNet Setup
 ================
 
@@ -34,22 +36,22 @@ git clone https://github.com/Ankr-network/bas-devnet-setup bas --recursive
 cd bas
 make install-docker
 make install-acme
-export CHAIN_ID=14000
-export DOMAIN_NAME=dev-01.bas.ankr.com
+export CHAIN_ID=197
+export DOMAIN_NAME=softobit.com
 make all
 ```
 
 P.S: Variable `DOMAIN_NAME` should be set to your domain
 
 Deployed services can be access though next endpoints:
-- https://rpc.${DOMAIN_NAME} - Web3 RPC endpoint
-- https://explorer.${DOMAIN_NAME} - Blockchain Explorer
-- https://faucet.${DOMAIN_NAME} - Faucet
-- https://staking.${DOMAIN_NAME} - Staking UI
+- https://rpc-test.${DOMAIN_NAME} - Web3 RPC endpoint
+- https://explorer-test.${DOMAIN_NAME} - Blockchain Explorer
+- https://faucet-test.${DOMAIN_NAME} - Faucet
+- https://staking-test.${DOMAIN_NAME} - Staking UI
 
 If you want to run node w/o load balancer and SSL certificates then use next command:
 ```bash
-CHAIN_ID=14000 make create-genesis start
+CHAIN_ID=197 make create-genesis start
 ```
 
 Docker compose files exposes next ports:
